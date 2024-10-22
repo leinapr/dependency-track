@@ -297,6 +297,20 @@ public class Project implements Serializable {
     private transient List<ProjectVersion> versions;
     private transient List<Component> dependencyGraph;
 
+    ###
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = true) // Clé étrangère pour lier un produit à un projet
+    private Product product;
+
+    public Produit getProduit() {
+        return produit;
+    }
+
+    public void setProduit(Produit produit) {
+        this.produit = produit;
+    }
+    ###
+        
     public long getId() {
         return id;
     }
