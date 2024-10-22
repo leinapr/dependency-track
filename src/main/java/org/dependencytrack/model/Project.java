@@ -302,12 +302,12 @@ public class Project implements Serializable {
     @JoinColumn(name = "product_id", nullable = true) // Clé étrangère pour lier un produit à un projet
     private Product product;
 
-    public Produit getProduit() {
-        return produit;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProduit(Produit produit) {
-        this.produit = produit;
+    public void setProduct(Product product) {
+        this.product = product;
     }
     ###
         
